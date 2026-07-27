@@ -1,10 +1,33 @@
-# AI Avatar - Điều Khiển Khuôn Mặt Bằng Giọng Nói
+# AI Avatar - Hệ Thống Animation Khuôn Mặt
 
-Hệ thống AI tạo khuôn mặt ảo có thể quay trái, quay phải, nhìn thẳng - điều khiển bằng giọng nói tiếng Việt, chuyển động tự nhiên như người thật.
+> **Stage 1:** Face morphing (Delaunay) — `avatar_all_in_one_v1.ipynb`
+> **Stage 2:** Neural AI Avatar (FOMM + MediaPipe) — `ai_avatar_liveportrait.ipynb` ⭐
 
 ---
 
-## 2 Module Chính
+## Module Chính
+
+### Module 2 (Mới): AI Avatar Neural — LivePortrait-Style
+
+**File:** `notebooks/ai_avatar_liveportrait.ipynb`
+
+Hệ thống AI Avatar dùng pretrained neural network (FOMM) để tạo khuôn mặt ảo hoạt động tự nhiên, điều khiển bởi webcam theo thời gian thực.
+
+**Kiến trúc:**
+```
+[Ảnh input] → Identity Builder (InsightFace + MediaPipe) → Canonical Face
+                                                              ↓
+[Webcam]    → Motion Tracker (MediaPipe 468 landmarks)    → Yaw/Pitch/Roll/Blink/Mouth
+                                                              ↓
+              Avatar Renderer (FOMM Neural Network)       → Animated Face
+                                                              ↓
+              Controller FSM (Idle / Look / Smile / Blink / Talk)
+```
+
+**Không dùng:** Delaunay triangulation, convex hull morphing, triangle blending, frame interpolation
+**Dùng:** Dense motion fields từ neural network, pretrained trên VoxCeleb
+
+### Module 1 (Cũ): Face Morphing
 
 ### Module 1: AI Avatar Điều Khiển Thời Gian Thực
 
