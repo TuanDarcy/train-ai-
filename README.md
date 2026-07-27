@@ -14,6 +14,7 @@
 Hệ thống AI Avatar dùng pretrained neural network (FOMM) để tạo khuôn mặt ảo hoạt động tự nhiên, điều khiển bởi webcam theo thời gian thực.
 
 **Kiến trúc:**
+
 ```
 [Ảnh input] → Identity Builder (InsightFace + MediaPipe) → Canonical Face
                                                               ↓
