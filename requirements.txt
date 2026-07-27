@@ -1,0 +1,33 @@
+# ============================================
+# AI Avatar Face Control - Requirements
+# ============================================
+# Install: pip install -r requirements.txt
+
+# ----- Image & Video Processing -----
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+Pillow>=10.0.0
+
+# ----- 3D Face Mesh & Landmarks -----
+mediapipe>=0.10.0
+
+# ----- 3D Geometry -----
+scipy>=1.11.0
+
+# ----- Voice Recognition -----
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.11
+pyttsx3>=2.90
+
+# ----- Deep Learning -----
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ----- Data & Utilities -----
+numpy>=1.24.0
+matplotlib>=3.7.0
+scikit-learn>=1.3.0
+tqdm>=4.65.0
+
+# ----- GPU acceleration (optional) -----
+onnxruntime-gpu>=1.16.0

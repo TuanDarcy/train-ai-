@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Models & Data (quá nặng, không commit)
+models/*.pkl
+models/*.h5
+models/*.pth
+data/raw/*
+data/processed/*
+
+# Nhưng giữ cấu trúc thư mục
+!data/angles/left/.gitkeep
+!data/angles/center/.gitkeep
+!data/angles/right/.gitkeep
+!models/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
